@@ -6,7 +6,8 @@ c = a+b
 print(c)
 print(a*b)
 
-
-
-
+#variables
+d = "ashok"
+print(typeof(a))
+print(typeof(d))
 print("Bye, See you later")
