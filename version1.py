@@ -7,7 +7,7 @@ print(c)
 print(a*b)
 
 #variables
-a = 1
-b = "ashok"
+d = "ashok"
 print(typeof(a))
-print(typeof(b))
+print(typeof(d))
+print("Bye, See you later")
