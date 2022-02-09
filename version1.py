@@ -11,3 +11,4 @@ d = "ashok"
 print(typeof(a))
 print(typeof(d))
 print("Bye, See you later")
+print("good bye")
