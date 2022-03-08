@@ -1,17 +1,15 @@
-from email import message
 import smtplib
+from email.message import EmailMessage
 
-server = smtplib.SMTP('smtp.gmail.com', 587) #we are using gmail server for this server port is 587
-
-server.starttls()  #to encryption the message we are using tls (transport layer service)
+server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 
 server.login('sender@gmail.com', 'password')
+message1 = EmailMessage()
+message1['Subject'] = 'This mail sent from smtp'
+message1['From'] = 'sender5@gmail.com'
+message1['To'] = 'reciver@gmail.com'
+message1.set_content('This mail is sent by python script by using SMTP and emailmessage. \n\nRegards,\nAshok')
 
-subject = 'This mail sent from smtp'
-body = '3rd mail sent throught SMTP protocol by using python '
-
-Message1 = f'Subject: {subject}\n\n{body}'
-
-server.sendmail('sender@gmail.com', 'reciver@gmail.com', Message1)
+server.send_message(message1)
 
 print('Mail Sent')
